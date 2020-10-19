@@ -15,7 +15,7 @@ class CreateUsertypeTable extends Migration
     {
         Schema::create('usertype', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('description', 200);
+            $table->string('description', 200); //Manager | Responsible 
             $table->timestamps();
         });
     }
