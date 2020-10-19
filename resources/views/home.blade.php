@@ -7,6 +7,7 @@
     <title>Panel de administración | Bingo</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" id="my-token" content="{{ csrf_token() }}">
     <!-- favicon
 		============================================ -->
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('template/img/favicon.ico') }}">
@@ -180,9 +181,13 @@
     </div>
     <!-- Main Menu area End-->
 
-    <div class="container">
+    <div class="container" id="app">
         <h1>Hola mundo</h1>
     </div>
+
+
+
+
 
     <!-- Start Footer area-->
     <div class="footer-copyright-area">
@@ -267,6 +272,7 @@
 	<!-- tawk chat JS
 		============================================ -->
     <script src="{{ asset('template/js/tawk-chat.js') }}"></script>
+    <script src="{{ asset('js/app.js') }}"></script>
 </body>
 
 </html>
