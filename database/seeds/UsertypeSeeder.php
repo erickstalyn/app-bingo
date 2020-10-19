@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class DatabaseSeeder extends Seeder
+class UsertypeSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,7 +11,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call(UsertypeSeeder::class);
-        $this->call(UserSeeder::class);
+        DB::table('usertype')->insert([
+            'description' => 'ADMINISTRADOR'
+        ]);
     }
 }
