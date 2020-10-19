@@ -115,7 +115,7 @@
                                                     <img src="{{ asset('template/img/post/1.jpg') }}" alt="" />
                                                 </div>
                                                 <div class="hd-mg-ctn">
-                                                    <h3>Erick Stalyn Pacherrez Puyén</h3>
+                                                    <h3>{{ Auth::user()->username }}</h3>
                                                     <p>Cerrar sesión</p>
                                                 </div>
                                             </div>
