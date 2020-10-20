@@ -1,11 +1,11 @@
 @if (Auth::check())
     @switch(Auth::user()->usertype->description)
-        @case('MANAGER')
+        @case('ADMINISTRADOR')
             <template v-if="menu==1">
                 <bingo></bingo>
             </template>
             @break
-        @case('RESPONSIBLE')
+        @case('RESPONSABLE')
             
             @break
         @default

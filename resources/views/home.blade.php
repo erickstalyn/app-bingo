@@ -143,10 +143,10 @@
                         <nav id="dropdown">
                             <ul class="mobile-menu-nav">
                                 @switch(Auth::user()->usertype->description)
-                                    @case('MANAGER')
+                                    @case('ADMINISTRADOR')
                                         @include('sidebars.sidebars_admin.sidebar_admin_mobile')
                                         @break
-                                    @case('RESPONSIBLE')
+                                    @case('RESPONSABLE')
                                         
                                         @break
                                     @default
@@ -166,10 +166,10 @@
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     @switch(Auth::user()->usertype->description)
-                        @case('MANAGER')
+                        @case('ADMINISTRADOR')
                             @include('sidebars.sidebars_admin.sidebar_admin_main')
                             @break
-                        @case('RESPONSIBLE')
+                        @case('RESPONSABLE')
                             
                             @break
                         @default
