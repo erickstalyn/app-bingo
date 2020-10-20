@@ -4,6 +4,9 @@
             <template v-if="menu==1">
                 <bingo></bingo>
             </template>
+            <template v-if="menu==2">
+                <prueba></prueba>
+            </template>
             @break
         @case('RESPONSABLE')
             
