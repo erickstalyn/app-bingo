@@ -7,8 +7,8 @@
 <div class="tab-content custom-menu-content">
   <div id="Home" class="tab-pane in active notika-tab-menu-bg animated flipInX">
       <ul class="notika-main-menu-dropdown">
-          <li><a href="#">Bingos</a></li>
-          <li><a href="#">Responsables</a></li>
+          <li><a @click="menu=1" href="#">Bingos</a></li>
+          <li><a @click="menu=2" href="#">Responsables</a></li>
       </ul>
   </div>
   <div id="mailbox" class="tab-pane notika-tab-menu-bg animated flipInX">

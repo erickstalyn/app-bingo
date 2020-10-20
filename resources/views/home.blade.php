@@ -182,7 +182,7 @@
     <!-- Main Menu area End-->
 
     <div class="container" id="app">
-        <h1>Hola mundo</h1>
+      @include('main_content')
     </div>
 
 
@@ -233,9 +233,9 @@
     <script src="{{ asset('template/js/scrollbar/jquery.mCustomScrollbar.concat.min.js') }}"></script>
     <!-- jvectormap JS
 		============================================ -->
-    <script src="{{ asset('template/js/jvectormap/jquery-jvectormap-2.0.2.min.js') }}"></script>
-    <script src="{{ asset('template/js/jvectormap/jquery-jvectormap-world-mill-en.js') }}"></script>
-    <script src="{{ asset('template/js/jvectormap/jvectormap-active.js') }}"></script>
+    {{-- <script src="{{ asset('template/js/jvectormap/jquery-jvectormap-2.0.2.min.js') }}"></script> --}}
+    {{-- <script src="{{ asset('template/js/jvectormap/jquery-jvectormap-world-mill-en.js') }}"></script> --}}
+    {{-- <script src="{{ asset('template/js/jvectormap/jvectormap-active.js') }}"></script> --}}
     <!-- sparkline JS
 		============================================ -->
     <script src="{{ asset('template/js/sparkline/jquery.sparkline.min.js') }}"></script>
