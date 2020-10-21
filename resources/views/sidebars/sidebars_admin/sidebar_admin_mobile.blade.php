@@ -1,8 +1,8 @@
 <li>
   <a data-toggle="collapse" data-target="" href="#">Mantenimientos mobile</a>
   <ul class="collapse dropdown-header-top">
-      <li><a href="index.html">Bingos</a></li>
-      <li><a href="index-2.html">Responsables</a></li>
+      <li><a @click="menu = 1" href="#">Bingos</a></li>
+      <li><a @click="menu = 2" href="#">Responsables</a></li>
   </ul>
 </li>
 <li>
