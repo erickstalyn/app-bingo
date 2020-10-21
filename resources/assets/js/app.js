@@ -19,7 +19,7 @@ Vue.component('bingo', require('./components/bingos/Bingo.vue'));
 Vue.component('prueba', require('./components/bingos/prueba.vue'));
 
 const app = new Vue({
-    el: '#app',
+    el: '#app-bingo',
     data: {
         menu: 1
     }
