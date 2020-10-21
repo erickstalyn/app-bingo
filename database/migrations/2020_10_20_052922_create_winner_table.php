@@ -13,9 +13,9 @@ class CreateWinnerTable extends Migration
      */
     public function up()
     {
-        Schema::create('winners', function (Blueprint $table) {
+        Schema::create('winner', function (Blueprint $table) {
             $table->smallIncrements('id');
-            $table->unsignedSmallInteger('bingo_id');
+            $table->unsignedInteger('bingo_id');
             $table->unsignedTinyInteger('game_id');
             $table->timestamps();
 
@@ -31,6 +31,6 @@ class CreateWinnerTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('winners');
+        Schema::dropIfExists('winner');
     }
 }

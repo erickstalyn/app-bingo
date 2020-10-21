@@ -13,9 +13,14 @@ class CreateGameTable extends Migration
      */
     public function up()
     {
-        Schema::create('games', function (Blueprint $table) {
-            $table->increments('id');
+        Schema::create('game', function (Blueprint $table) {
+            $table->tinyIncrements('id');
+            $table->longText('balls')->nullable();
+            $table->char('state_game', 1);  // Indica si el juego ya ha sido jugado o no. Por ejemplo: ('P': jugando|playing), ('F': terminado:finished)
+            $table->unsignedTinyInteger('gametype_id');
             $table->timestamps();
+
+            $table->foreign('gametype_id')->references('id')->on('gametype');
         });
     }
 
@@ -26,6 +31,6 @@ class CreateGameTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('games');
+        Schema::dropIfExists('game');
     }
 }

@@ -18,7 +18,6 @@ class CreatePersonTable extends Migration
             $table->char('code_uni', 7)->unique();
             $table->string('names', 100);
             $table->string('income_cycle', 12);
-
             $table->timestamps();
         });
     }

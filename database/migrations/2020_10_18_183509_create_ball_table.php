@@ -16,7 +16,7 @@ class CreateBallTable extends Migration
         Schema::create('ball', function (Blueprint $table) {
             $table->increments('id');
             $table->char('letter', 1); //B | I | N | G |O
-            $table->unsignedTinyint('number'); //Del 1 al 75
+            $table->unsignedTinyInteger('number'); //Del 1 al 75
             $table->boolean('state'); // TRUE: ACTTIVO | FALSE: DESACTIVADO
         });
     }

@@ -16,6 +16,11 @@ class UserSeeder extends Seeder
             'user' => 'stalyn',
             'password' => bcrypt('stalyn'),
             'usertype_id' => 1
+        ], [
+            'username' => 'José Anderson Cespedes Diaz',
+            'user' => 'jose',
+            'password' => bcrypt('jose'),
+            'usertype_id' => 2
         ]);
     }
 }

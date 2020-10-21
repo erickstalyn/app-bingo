@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateGametypeTable extends Migration
+class CreateConfigurationTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,11 @@ class CreateGametypeTable extends Migration
      */
     public function up()
     {
-        Schema::create('gametype', function (Blueprint $table) {
+        Schema::create('configuration', function (Blueprint $table) {
             $table->tinyIncrements('id');
-            $table->string('description', 100)->unique();
+            $table->char('code', 4)->unique();
+            $table->string('description', 50);
+            $table->boolean('state');
             $table->timestamps();
         });
     }
@@ -27,6 +29,6 @@ class CreateGametypeTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('gametype');
+        Schema::dropIfExists('configuration');
     }
 }
