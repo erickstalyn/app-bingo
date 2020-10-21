@@ -61,6 +61,7 @@
 </head>
 
 <body>
+    
     <div class="header-top-area">
         <div class="container">
             <div class="row">
@@ -72,15 +73,6 @@
                 <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
                     <div class="header-top-menu">
                         <ul class="nav navbar-nav notika-top-nav">
-                            <li class="nav-item dropdown">
-                                <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><span><i class="notika-icon notika-search"></i></span></a>
-                                <div role="menu" class="dropdown-menu search-dd animated flipInX">
-                                    <div class="search-input">
-                                        <i class="notika-icon notika-left-arrow"></i>
-                                        <input type="text" />
-                                    </div>
-                                </div>
-                            </li>
                             <li class="nav-item dropdown">
                                 <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><span><i class="notika-icon notika-mail"></i></span></a>
                                 <div role="menu" class="dropdown-menu message-dd animated zoomIn">
@@ -105,7 +97,7 @@
                                     </div>
                                 </div>
                             </li>
-
+    
                             <li class="nav-item dropdown">
                                 <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><span><i class="notika-icon notika-next"></i></span></a>
                                 <div role="menu" class="dropdown-menu message-dd animated zoomIn">
@@ -133,9 +125,10 @@
             </div>
         </div>
     </div>
-    <!-- End Header Top Area -->
-    <!-- Mobile Menu start -->
-    <div class="mobile-menu-area">
+      
+    <div id="app-bingo">
+      
+      <div class="mobile-menu-area">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -158,10 +151,9 @@
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Mobile Menu end -->
-    <!-- Main Menu area start-->
-    <div class="main-menu-area mg-tb-40">
+      </div>
+
+      <div class="main-menu-area mg-tb-30">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -178,29 +170,29 @@
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Main Menu area End-->
+      </div>
 
-    <div class="container" id="app">
-      @include('main_content')
-    </div>
-
-
-
-
-    <!-- Start Footer area-->
-    <div class="footer-copyright-area">
+      <div class="form-element-area" id="app">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="footer-copy-right">
-                        <p>Copyright © 2020. Todos los derechos reservados. P y C</a>.</p>
-                    </div>
-                </div>
-            </div>
+          @include('main_content')
         </div>
+      </div>
+
     </div>
-    <!-- End Footer area-->
+
+
+      <div class="footer-copyright-area">
+          <div class="container">
+              <div class="row">
+                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                      <div class="footer-copy-right">
+                          <p>Copyright © 2020. Desarrollado por P y C</a>.</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
 
     <!-- jquery
 		============================================ -->
@@ -261,16 +253,18 @@
     <!-- plugins JS
 		============================================ -->
     <script src="{{ asset('template/js/plugins.js') }}"></script>
-	<!--  Chat JS
+	  <!--  Chat JS
 		============================================ -->
     <script src="{{ asset('template/js/chat/moment.min.js') }}"></script>
     <script src="{{ asset('template/js/chat/jquery.chat.js') }}"></script>
     <!-- main JS
 		============================================ -->
     <script src="{{ asset('template/js/main.js') }}"></script>
-	<!-- tawk chat JS
+	  <!-- tawk chat JS
 		============================================ -->
     <script src="{{ asset('template/js/tawk-chat.js') }}"></script>
+
+
     <script src="{{ asset('js/app.js') }}"></script>
 </body>
 
