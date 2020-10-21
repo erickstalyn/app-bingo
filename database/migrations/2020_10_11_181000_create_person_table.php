@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateBallTable extends Migration
+class CreatePersonTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,12 @@ class CreateBallTable extends Migration
      */
     public function up()
     {
-        Schema::create('ball', function (Blueprint $table) {
+        Schema::create('person', function (Blueprint $table) {
             $table->increments('id');
-            $table->char('letter', 1); //B | I | N | G |O
-            $table->unsignedTinyInteger('number'); //Del 1 al 75
-            $table->boolean('state'); // TRUE: ACTTIVO | FALSE: DESACTIVADO
+            $table->char('code_uni', 7)->unique();
+            $table->string('names', 100);
+            $table->string('income_cycle', 12);
+            $table->timestamps();
         });
     }
 
@@ -28,6 +29,6 @@ class CreateBallTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('ball');
+        Schema::dropIfExists('person');
     }
 }
