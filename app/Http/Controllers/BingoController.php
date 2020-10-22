@@ -18,9 +18,9 @@ class BingoController extends Controller
         
         $estado = $request->estado;
         $texto = $request->texto;
-        $filas = 12;
+        $rows = 50;
 
-        $bingos = Bingo::toList('all')->paginate();
+        $bingos = Bingo::toList('all')->paginate($rows);
 
         return [
             'bingos'     => $bingos,

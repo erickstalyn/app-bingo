@@ -28,7 +28,7 @@ $factory->define(Bingo::class, function (Faker $faker) {
         ],
         'state_balls' => is_null($gamer) ? 'E' : 'F',
         'state_transaction' => is_null($gamer) ? 'U' : 'S',
-        'state_transaction' => $faker->randomElement(['E', 'D']),
+        // 'state_transaction' => $faker->randomElement(['E', 'D']),
         'responsible_id' => Person::all()->random()
     ];
 });

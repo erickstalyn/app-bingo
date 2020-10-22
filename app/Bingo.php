@@ -24,7 +24,7 @@ class Bingo extends Model
             // ->where(function($subquery) use ($unidad_id) {
             //     if($unidad_id !== 'all') $subquery->where('repuesto.unidad_id', $unidad_id);
             // })
+            ->select('bingo.id', 'bingo.code', 'bingo.state_game', 'bingo.state_balls', 'bingo.state_transaction', 'person.names as responsible_name')
             ->orderBy('person.names', 'ASC');
-            // ->select('repuesto.id', 'repuesto.codigo', 'repuesto.descripcion', 'repuesto.deleted_at', 'unidad.descripcion as unidad_descripcion');
     }
 }

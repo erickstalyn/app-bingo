@@ -14,56 +14,9 @@
                             </div>
                         </div>
                     </div>
-                    
-                    <div class="row">
-                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                            <div class="nk-int-mk sl-dp-mn">
-                                <h2>Estado de juego</h2>
-                            </div>
-                            <div class="bootstrap-select fm-cmp-mg">
-                                <select class="selectpicker">
-                                    <option>Habilitado</option>
-                                    <option>Inhabilitado</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                            <div class="nk-int-mk sl-dp-mn">
-                                <h2>Estado de las bolillas</h2>
-                            </div>
-                            <div class="bootstrap-select fm-cmp-mg">
-                                <select class="selectpicker">
-                                    <option>Vacíos</option>
-                                    <option>Llenos</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-                            <div class="nk-int-mk sl-dp-mn">
-                                <h2>Estado de venta</h2>
-                            </div>
-                            <div class="bootstrap-select fm-cmp-mg">
-                                <select class="selectpicker">
-                                    <option>Vendido</option>
-                                    <option>Sin vender</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
-                            <div class="nk-int-mk sl-dp-mn">
-                                <h2>Buscar</h2>
-                            </div>
-                            <div class="form-group">
-                                <div class="nk-int-st">
-                                    <input type="text" class="form-control">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
 
                     <div class="row">
-                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6">
+                        <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                             <div class="nk-int-mk sl-dp-mn">
                                 <h2>E. Juego</h2>
                             </div>
@@ -75,7 +28,7 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6">
+                        <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                             <div class="nk-int-mk sl-dp-mn">
                                 <h2>E. Venta</h2>
                             </div>
@@ -87,7 +40,7 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6">
+                        <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                             <div class="nk-int-mk sl-dp-mn">
                                 <h2>E. Bolillas</h2>
                             </div>
@@ -99,7 +52,7 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <div class="col-lg-6 col-md-3 col-sm-12 col-xs-6">
                             <div class="nk-int-mk sl-dp-mn">
                                 <h2>Buscar</h2>
                             </div>
@@ -135,7 +88,11 @@
                             </thead>
                             <tbody>
                                 <tr v-for="bingo in listBingo" :key="bingo.id">
-                                    <td>{{bingo.codigo}}</td>
+                                    <td v-text="bingo.code"></td>
+                                    <td v-text="bingo.state_game === 'E' ? 'Habilitado' : 'Deshabilitado'"></td>
+                                    <td v-text="bingo.state_balls === 'E' ? 'Vacío': 'Lleno'"></td>
+                                    <td v-text="bingo.state_transaction === 'S' ? 'Vendido': 'Sin vender'"></td>
+                                    <td v-text="bingo.responsible_name"></td>
                                 </tr>
                                 <tr>
                                     <td>RE729N34</td>
@@ -146,16 +103,16 @@
                                     <td>Sofía Morales Quiroz</td>
                                     <td>-</td>
                                     <td>
-                                        <button class="btn btn-info info-icon-notika"><i class="notika-icon notika-eye"></i></button>
+                                        <!-- <button class="btn btn-info info-icon-notika"><i class="notika-icon notika-eye"></i></button>
                                         <button class="btn btn-warning warning-icon-notika"><i class="notika-icon notika-draft"></i></button>
                                         <button class="btn btn-success success-icon-notika"><i class="notika-icon notika-checked"></i></button>
-                                        <button class="btn btn-danger danger-icon-notika"><i class="notika-icon notika-trash"></i></button>
+                                        <button class="btn btn-danger danger-icon-notika"><i class="notika-icon notika-trash"></i></button> -->
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-                    <div class="pagination-inbox">
+                    <!-- <div class="pagination-inbox">
                         <ul class="wizard-nav-ac">
                             <li><a class="btn" href="#"><i class="notika-icon notika-back"></i></a></li>
                             <li class="active"><a class="btn" href="#">1</a></li>
@@ -163,7 +120,7 @@
                             <li><a class="btn" href="#">3</a></li>
                             <li><a class="btn" href="#"><i class="notika-icon notika-next-pro"></i></a></li>
                         </ul>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
