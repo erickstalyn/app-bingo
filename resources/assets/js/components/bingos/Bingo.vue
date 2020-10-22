@@ -134,50 +134,8 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>RE729N34</td>
-                                    <td>Habilitado</td>
-                                    <td>Lleno</td>
-                                    <td>Sin vender</td>
-                                    <td>Oscar Melendez Perez</td>
-                                    <td>Sofía Morales Quiroz</td>
-                                    <td>-</td>
-                                    <td>
-                                        <button class="btn btn-info info-icon-notika"><i class="notika-icon notika-eye"></i></button>
-                                        <button class="btn btn-warning warning-icon-notika"><i class="notika-icon notika-draft"></i></button>
-                                        <button class="btn btn-success success-icon-notika"><i class="notika-icon notika-checked"></i></button>
-                                        <button class="btn btn-danger danger-icon-notika"><i class="notika-icon notika-trash"></i></button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>J482M47</td>
-                                    <td>Deshabilitado</td>
-                                    <td>Vacío</td>
-                                    <td>Vendido</td>
-                                    <td>Oscar Melendez</td>
-                                    <td>María Guitierrez Cespedes</td>
-                                    <td>18/10/2020</td>
-                                    <td>
-                                        <button class="btn btn-info info-icon-notika"><i class="notika-icon notika-eye"></i></button>
-                                        <button class="btn btn-warning warning-icon-notika"><i class="notika-icon notika-draft"></i></button>
-                                        <button class="btn btn-success success-icon-notika"><i class="notika-icon notika-checked"></i></button>
-                                        <button class="btn btn-danger danger-icon-notika"><i class="notika-icon notika-trash"></i></button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>J482M47</td>
-                                    <td>Deshabilitado</td>
-                                    <td>Vacío</td>
-                                    <td>Vendido</td>
-                                    <td>Oscar Melendez</td>
-                                    <td>María Guitierrez Cespedes</td>
-                                    <td>19/10/2020</td>
-                                    <td>
-                                        <button class="btn btn-info info-icon-notika"><i class="notika-icon notika-eye"></i></button>
-                                        <button class="btn btn-warning warning-icon-notika"><i class="notika-icon notika-draft"></i></button>
-                                        <button class="btn btn-success success-icon-notika"><i class="notika-icon notika-checked"></i></button>
-                                        <button class="btn btn-danger danger-icon-notika"><i class="notika-icon notika-trash"></i></button>
-                                    </td>
+                                <tr v-for="bingo in listBingo" :key="bingo.id">
+                                    <td>{{bingo.codigo}}</td>
                                 </tr>
                                 <tr>
                                     <td>RE729N34</td>
@@ -217,12 +175,42 @@
     export default {
         data() {
             return {
-                
+                listBingo: [],
+                pagination: {
+                    total: 0,
+                    currentPage: 0,
+                    lastPage: 0,
+                    perPage: 0,
+                    firstItem: 0,
+                    lastItem: 0
+                },
+                busqueda: {
+                    texto: '',
+                    estado: 2,
+                    filas: 5
+                },
             }
         },
         methods: {
+            toList(page = 1) {
+                this.pagination.currentPage = page;
+
+                const url = '/bingo?page='+this.pagination.currentPage
+                            +'&estado='+this.busqueda.estado
+                            +'&texto='+this.busqueda.texto
+                            +'&filas='+this.busqueda.filas;
+                
+                axios.get(url).then((res) => {
+                    console.log(res);
+                    this.listBingo = res.data.bingos.data;
+                    this.pagination = res.data.pagination;
+                }).catch((error) => {
+                    console.log(error);
+                });
+            }
         },
         mounted() {
+            this.toList();
         }
     }
 </script>
