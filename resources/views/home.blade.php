@@ -179,7 +179,7 @@
         </div>
       </div>
 
-      <div class="container-fluid">
+      <div class="container">
         @include('main_content')
       </div>
 
