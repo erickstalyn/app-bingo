@@ -4,20 +4,18 @@
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="form-element-list mg-t-50">
                     <div class="cmp-tb-hd">
-                        <h1>Bingos</h1>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6 col-sm-5 col-xs-7">
-                            <div class="nk-int-mk sl-dp-mn">
-                                <h2>Buscar</h2>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <h1>Bingo</h1>
                             </div>
-                            <div class="form-group">
-                                <div class="nk-int-st">
-                                    <input type="text" class="form-control" placeholder="Buscar por código o persona">
-                                </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 text-right">
+                                <button class="btn btn-primary notika-btn-primary">Nuevo</button>
+                                <button class="btn btn-danger notika-btn-danger">Report PDF</button>
                             </div>
                         </div>
-                        <div class="col-lg-2 col-md-2 col-sm-3 col-xs-5">
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6">
                             <div class="nk-int-mk sl-dp-mn">
                                 <h2>E. Juego</h2>
                             </div>
@@ -29,7 +27,7 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6">
                             <div class="nk-int-mk sl-dp-mn">
                                 <h2>E. Venta</h2>
                             </div>
@@ -41,7 +39,7 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-4">
                             <div class="nk-int-mk sl-dp-mn">
                                 <h2>E. Bolillas</h2>
                             </div>
@@ -53,59 +51,112 @@
                                 </select>
                             </div>
                         </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-8">
+                            <div class="nk-int-mk sl-dp-mn">
+                                <h2>Buscar</h2>
+                            </div>
+                            <div class="form-group">
+                                <div class="nk-int-st search-input search-overt">
+                                    <input type="text" class="form-control" placeholder="Por código o persona" />
+                                    <button class="btn search-ib">Search</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="data-table-list">
-                    <div class="basic-tb-hd">
-                        <h2>Basic Example</h2>
-                        <p>It's just that simple. Turn your simple table into a sophisticated data table and offer your users a nice experience and great features without any effort.</p>
-                    </div>
+                    <!-- <div class="basic-tb-hd" style="border:1px solid red">
+                    </div> -->
                     <div class="table-responsive">
                         <table id="data-table-basic" class="table table-striped">
                             <thead>
                                 <tr>
-                                    <th>Name</th>
-                                    <th>Position</th>
-                                    <th>Office</th>
-                                    <th>Age</th>
-                                    <th>Start date</th>
-                                    <th>Salary</th>
+                                    <th>Código</th>
+                                    <th>E. Juego</th>
+                                    <th>E. Bolillas</th>
+                                    <th>E. Venta</th>
+                                    <th>Responsable</th>
+                                    <th>Jugador</th>
+                                    <th>F. Venta</th>
+                                    <th>Opciones</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>Thor Walton</td>
-                                    <td>Developer</td>
-                                    <td>New York</td>
-                                    <td>61</td>
-                                    <td>2013/08/11</td>
-                                    <td>$98,540</td>
+                                    <td>RE729N34</td>
+                                    <td>Habilitado</td>
+                                    <td>Lleno</td>
+                                    <td>Sin vender</td>
+                                    <td>Oscar Melendez Perez</td>
+                                    <td>Sofía Morales Quiroz</td>
+                                    <td>-</td>
+                                    <td>
+                                        <button class="btn btn-info info-icon-notika"><i class="notika-icon notika-eye"></i></button>
+                                        <button class="btn btn-warning warning-icon-notika"><i class="notika-icon notika-draft"></i></button>
+                                        <button class="btn btn-success success-icon-notika"><i class="notika-icon notika-checked"></i></button>
+                                        <button class="btn btn-danger danger-icon-notika"><i class="notika-icon notika-trash"></i></button>
+                                    </td>
                                 </tr>
                                 <tr>
-                                    <td>Finn Camacho</td>
-                                    <td>Support Engineer</td>
-                                    <td>San Francisco</td>
-                                    <td>47</td>
-                                    <td>2009/07/07</td>
-                                    <td>$87,500</td>
+                                    <td>J482M47</td>
+                                    <td>Deshabilitado</td>
+                                    <td>Vacío</td>
+                                    <td>Vendido</td>
+                                    <td>Oscar Melendez</td>
+                                    <td>María Guitierrez Cespedes</td>
+                                    <td>18/10/2020</td>
+                                    <td>
+                                        <button class="btn btn-info info-icon-notika"><i class="notika-icon notika-eye"></i></button>
+                                        <button class="btn btn-warning warning-icon-notika"><i class="notika-icon notika-draft"></i></button>
+                                        <button class="btn btn-success success-icon-notika"><i class="notika-icon notika-checked"></i></button>
+                                        <button class="btn btn-danger danger-icon-notika"><i class="notika-icon notika-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>J482M47</td>
+                                    <td>Deshabilitado</td>
+                                    <td>Vacío</td>
+                                    <td>Vendido</td>
+                                    <td>Oscar Melendez</td>
+                                    <td>María Guitierrez Cespedes</td>
+                                    <td>19/10/2020</td>
+                                    <td>
+                                        <button class="btn btn-info info-icon-notika"><i class="notika-icon notika-eye"></i></button>
+                                        <button class="btn btn-warning warning-icon-notika"><i class="notika-icon notika-draft"></i></button>
+                                        <button class="btn btn-success success-icon-notika"><i class="notika-icon notika-checked"></i></button>
+                                        <button class="btn btn-danger danger-icon-notika"><i class="notika-icon notika-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>RE729N34</td>
+                                    <td>Habilitado</td>
+                                    <td>Lleno</td>
+                                    <td>Sin vender</td>
+                                    <td>Oscar Melendez Perez</td>
+                                    <td>Sofía Morales Quiroz</td>
+                                    <td>-</td>
+                                    <td>
+                                        <button class="btn btn-info info-icon-notika"><i class="notika-icon notika-eye"></i></button>
+                                        <button class="btn btn-warning warning-icon-notika"><i class="notika-icon notika-draft"></i></button>
+                                        <button class="btn btn-success success-icon-notika"><i class="notika-icon notika-checked"></i></button>
+                                        <button class="btn btn-danger danger-icon-notika"><i class="notika-icon notika-trash"></i></button>
+                                    </td>
                                 </tr>
                             </tbody>
-                            <tfoot>
-                                <tr>
-                                    <th>Name</th>
-                                    <th>Position</th>
-                                    <th>Office</th>
-                                    <th>Age</th>
-                                    <th>Start date</th>
-                                    <th>Salary</th>
-                                </tr>
-                            </tfoot>
                         </table>
+                        <div class="pagination-inbox">
+                            <ul class="wizard-nav-ac">
+                                <li><a class="btn" href="#"><i class="notika-icon notika-back"></i></a></li>
+                                <li class="active"><a class="btn" href="#">1</a></li>
+                                <li><a class="btn" href="#">2</a></li>
+                                <li><a class="btn" href="#">3</a></li>
+                                <li><a class="btn" href="#"><i class="notika-icon notika-next-pro"></i></a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
