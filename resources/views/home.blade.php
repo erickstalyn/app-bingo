@@ -49,6 +49,9 @@
     <!-- main CSS
 		============================================ -->
     <link rel="stylesheet" href="{{ asset('template/css/main.css') }}">
+    <!-- bootstrap select CSS
+		============================================ -->
+    <link rel="stylesheet" href="{{ asset('template/css/bootstrap-select/bootstrap-select.css') }}">
     <!-- style CSS
 		============================================ -->
     <link rel="stylesheet" href="{{ asset('template/style.css') }}">
@@ -153,8 +156,8 @@
         </div>
       </div>
 
-      <div class="main-menu-area mg-tb-30">
-        <div class="container">
+      <div class="main-menu-area">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     @switch(Auth::user()->usertype->description)
@@ -172,10 +175,8 @@
         </div>
       </div>
 
-      <div class="form-element-area" id="app">
-        <div class="container">
-          @include('main_content')
-        </div>
+      <div class="container-fluid">
+        @include('main_content')
       </div>
 
     </div>
@@ -263,6 +264,9 @@
 	  <!-- tawk chat JS
 		============================================ -->
     <script src="{{ asset('template/js/tawk-chat.js') }}"></script>
+    <!-- bootstrap select JS
+		============================================ -->
+    <script src="{{ asset('template/js/bootstrap-select/bootstrap-select.js') }}"></script>
 
 
     <script src="{{ asset('js/app.js') }}"></script>
