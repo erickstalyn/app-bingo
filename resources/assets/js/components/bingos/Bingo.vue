@@ -2,10 +2,58 @@
     <div>
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div class="form-element-list mg-t-50">
+                <div class="form-element-list mg-t-10">
                     <div class="cmp-tb-hd">
                         <h1>Bingos</h1>
                     </div>
+                    
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                            <div class="nk-int-mk sl-dp-mn">
+                                <h2>Estado de juego</h2>
+                            </div>
+                            <div class="bootstrap-select fm-cmp-mg">
+                                <select class="selectpicker">
+                                    <option>Habilitado</option>
+                                    <option>Inhabilitado</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                            <div class="nk-int-mk sl-dp-mn">
+                                <h2>Estado de las bolillas</h2>
+                            </div>
+                            <div class="bootstrap-select fm-cmp-mg">
+                                <select class="selectpicker">
+                                    <option>Vacíos</option>
+                                    <option>Llenos</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                            <div class="nk-int-mk sl-dp-mn">
+                                <h2>Estado de venta</h2>
+                            </div>
+                            <div class="bootstrap-select fm-cmp-mg">
+                                <select class="selectpicker">
+                                    <option>Vendido</option>
+                                    <option>Sin vender</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                            <div class="nk-int-mk sl-dp-mn">
+                                <h2>Buscar</h2>
+                            </div>
+                            <div class="form-group">
+                                <div class="nk-int-st">
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
                     <div class="row">
                         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                             <div class="form-group ic-cmp-int float-lb floating-lb">
@@ -109,7 +157,7 @@
             }
         },
         mounted() {
-            // this.init();
+            this.init();
         }
     }
 </script>

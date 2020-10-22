@@ -55,6 +55,9 @@
     <!-- responsive CSS
 		============================================ -->
     <link rel="stylesheet" href="{{ asset('template/css/responsive.css') }}">
+    <!-- bootstrap select CSS
+		============================================ -->
+    <link rel="stylesheet" href="{{ asset('template/css/bootstrap-select/bootstrap-select.css') }}">
     <!-- modernizr JS
 		============================================ -->
     <script src="{{ asset('template/js/vendor/modernizr-2.8.3.min.js') }}"></script>
@@ -62,71 +65,72 @@
 
 <body>
     
-    <div class="header-top-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                    <div class="logo-area">
-                        <a href="#"><img src="{{ asset('template/img/logo/logo.png') }}" alt="" /></a>
-                    </div>
-                </div>
-                <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
-                    <div class="header-top-menu">
-                        <ul class="nav navbar-nav notika-top-nav">
-                            <li class="nav-item dropdown">
-                                <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><span><i class="notika-icon notika-mail"></i></span></a>
-                                <div role="menu" class="dropdown-menu message-dd animated zoomIn">
-                                    <div class="hd-mg-tt">
-                                        <h2>Messages</h2>
-                                    </div>
-                                    <div class="hd-message-info">
-                                        <a href="#">
-                                            <div class="hd-message-sn">
-                                                <div class="hd-message-img">
-                                                    <img src="{{ asset('template/img/post/1.jpg') }}" alt="" />
-                                                </div>
-                                                <div class="hd-mg-ctn">
-                                                    <h3>David Belle</h3>
-                                                    <p>Cum sociis natoque penatibus et magnis dis parturient montes</p>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="hd-mg-va">
-                                        <a href="#">View All</a>
-                                    </div>
-                                </div>
-                            </li>
-    
-                            <li class="nav-item dropdown">
-                                <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><span><i class="notika-icon notika-next"></i></span></a>
-                                <div role="menu" class="dropdown-menu message-dd animated zoomIn">
-                                    <div class="hd-message-info">
-                                        <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                            <div class="hd-message-sn">
-                                                <div class="hd-message-img">
-                                                    <img src="{{ asset('template/img/post/1.jpg') }}" alt="" />
-                                                </div>
-                                                <div class="hd-mg-ctn">
-                                                    <h3>{{ Auth::user()->username }}</h3>
-                                                    <p>Cerrar sesión</p>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                            {{ csrf_field() }}
-                                        </form>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-      
     <div id="app-bingo">
+      <div class="header-top-area">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                  <div class="logo-area">
+                      <a href="#"><img src="{{ asset('template/img/logo/logo.png') }}" alt="" /></a>
+                  </div>
+              </div>
+              <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                  <div class="header-top-menu">
+                      <ul class="nav navbar-nav notika-top-nav">
+                          <li class="nav-item dropdown">
+                              <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><span><i class="notika-icon notika-mail"></i></span></a>
+                              <div role="menu" class="dropdown-menu message-dd animated zoomIn">
+                                  <div class="hd-mg-tt">
+                                      <h2>Messages</h2>
+                                  </div>
+                                  <div class="hd-message-info">
+                                      <a href="#">
+                                          <div class="hd-message-sn">
+                                              <div class="hd-message-img">
+                                                  <img src="{{ asset('template/img/post/1.jpg') }}" alt="" />
+                                              </div>
+                                              <div class="hd-mg-ctn">
+                                                  <h3>David Belle</h3>
+                                                  <p>Cum sociis natoque penatibus et magnis dis parturient montes</p>
+                                              </div>
+                                          </div>
+                                      </a>
+                                  </div>
+                                  <div class="hd-mg-va">
+                                      <a href="#">View All</a>
+                                  </div>
+                              </div>
+                          </li>
+          
+                          <li class="nav-item dropdown">
+                              <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><span><i class="notika-icon notika-next"></i></span></a>
+                              <div role="menu" class="dropdown-menu message-dd animated zoomIn">
+                                  <div class="hd-message-info">
+                                      <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                          <div class="hd-message-sn">
+                                              <div class="hd-message-img">
+                                                  <img src="{{ asset('template/img/post/1.jpg') }}" alt="" />
+                                              </div>
+                                              <div class="hd-mg-ctn">
+                                                  <h3>{{ Auth::user()->username }}</h3>
+                                                  <p>Cerrar sesión</p>
+                                              </div>
+                                          </div>
+                                      </a>
+                                      <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                          {{ csrf_field() }}
+                                      </form>
+                                  </div>
+                              </div>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      
+    
       
       <div class="mobile-menu-area">
         <div class="container">
@@ -153,7 +157,7 @@
         </div>
       </div>
 
-      <div class="main-menu-area mg-tb-30">
+      <div class="main-menu-area">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -178,8 +182,8 @@
         </div>
       </div>
 
-    </div>
-
+      
+    
 
       <div class="footer-copyright-area">
           <div class="container">
@@ -193,7 +197,7 @@
           </div>
       </div>
 
-
+    </div>
     <!-- jquery
 		============================================ -->
     <script src="{{ asset('template/js/vendor/jquery-1.12.4.min.js') }}"></script>
@@ -263,6 +267,10 @@
 	  <!-- tawk chat JS
 		============================================ -->
     <script src="{{ asset('template/js/tawk-chat.js') }}"></script>
+    <!-- bootstrap select JS
+		============================================ -->
+    <script src="{{ asset('template/js/bootstrap-select/bootstrap-select.js') }}"></script>
+    
 
 
     <script src="{{ asset('js/app.js') }}"></script>
