@@ -5,10 +5,10 @@
                 <div class="form-element-list mg-t-50">
                     <div class="cmp-tb-hd">
                         <div class="row">
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-4">
                                 <h1>Bingo</h1>
                             </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 text-right">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-8 text-right">
                                 <button class="btn btn-primary notika-btn-primary">Nuevo</button>
                                 <button class="btn btn-danger notika-btn-danger">Report PDF</button>
                             </div>
@@ -39,7 +39,7 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-4">
+                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6">
                             <div class="nk-int-mk sl-dp-mn">
                                 <h2>E. Bolillas</h2>
                             </div>
@@ -51,7 +51,7 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-8">
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                             <div class="nk-int-mk sl-dp-mn">
                                 <h2>Buscar</h2>
                             </div>
@@ -82,7 +82,7 @@
                                     <th>Responsable</th>
                                     <th>Jugador</th>
                                     <th>F. Venta</th>
-                                    <th>Opciones</th>
+                                    <th class="text-center">Opciones</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -148,15 +148,15 @@
                                 </tr>
                             </tbody>
                         </table>
-                        <div class="pagination-inbox">
-                            <ul class="wizard-nav-ac">
-                                <li><a class="btn" href="#"><i class="notika-icon notika-back"></i></a></li>
-                                <li class="active"><a class="btn" href="#">1</a></li>
-                                <li><a class="btn" href="#">2</a></li>
-                                <li><a class="btn" href="#">3</a></li>
-                                <li><a class="btn" href="#"><i class="notika-icon notika-next-pro"></i></a></li>
-                            </ul>
-                        </div>
+                    </div>
+                    <div class="pagination-inbox">
+                        <ul class="wizard-nav-ac">
+                            <li><a class="btn" href="#"><i class="notika-icon notika-back"></i></a></li>
+                            <li class="active"><a class="btn" href="#">1</a></li>
+                            <li><a class="btn" href="#">2</a></li>
+                            <li><a class="btn" href="#">3</a></li>
+                            <li><a class="btn" href="#"><i class="notika-icon notika-next-pro"></i></a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -167,6 +167,11 @@
 
 <script>
     export default {
+        data() {
+            return {
+                
+            }
+        },
         methods: {
         },
         mounted() {
